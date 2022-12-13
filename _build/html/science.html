@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Contributions to Science &#8212; Data Science Toolbox Final Assignment</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Grizzly Bear Conservation in BC" href="grizzlies.html" />
+    <link rel="prev" title="An Ode to Libraries" href="libraries.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/puzzle-img.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Science Toolbox Final Assignment</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Library Notebook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="libraries.html">
+   An Ode to Libraries
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Science Markdown
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Contributions to Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Grizzly Bears Notebook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="grizzlies.html">
+   Grizzly Bear Conservation in BC
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Freshwater Aquariums Markdown
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="aquariums.html">
+   Freshwater Aquariums
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/science.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fscience.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/science.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="_sources/science.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#newton-s-law-of-universal-gravitation">
+   Newton’s Law of Universal Gravitation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#history">
+     History
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-newton-figure">
+   height:400px
+name:newton-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-definition">
+     Simple Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equation">
+     Equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datasets">
+     Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#telescopic-observation-of-mars">
+   Telescopic Observation of Mars
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content-references-his">
+     History
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-galileo-figure">
+   height:400px
+name:galileo-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mars-stats">
+     Mars Stats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculations">
+     Calculations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Contributions to Science</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#newton-s-law-of-universal-gravitation">
+   Newton’s Law of Universal Gravitation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#history">
+     History
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-newton-figure">
+   height:400px
+name:newton-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simple-definition">
+     Simple Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equation">
+     Equation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#datasets">
+     Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#telescopic-observation-of-mars">
+   Telescopic Observation of Mars
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content-references-his">
+     History
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-galileo-figure">
+   height:400px
+name:galileo-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mars-stats">
+     Mars Stats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calculations">
+     Calculations
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="contributions-to-science">
+<span id="content-references-cs"></span><h1>Contributions to Science<a class="headerlink" href="#contributions-to-science" title="Permalink to this headline">#</a></h1>
+<section id="newton-s-law-of-universal-gravitation">
+<span id="content-references-ug"></span><h2>Newton’s Law of Universal Gravitation<a class="headerlink" href="#newton-s-law-of-universal-gravitation" title="Permalink to this headline">#</a></h2>
+<section id="history">
+<h3>History<a class="headerlink" href="#history" title="Permalink to this headline">#</a></h3>
+<p>Sir Issac Newton was an English mathematician, physicist, astronomer, alchemist, theologian, and author (described in his time as a “natural philosopher”), widely recognised as one of the greatest mathematicians and physicists and among the most influential scientists of all time.<br><br></p>
+<figure class="align-default">
+<img alt="https://i.natgeofe.com/n/faf6f6b2-3d6f-4fee-82ed-77a2f28c0063/11606.jpg?w=636&amp;h=437" src="https://i.natgeofe.com/n/faf6f6b2-3d6f-4fee-82ed-77a2f28c0063/11606.jpg?w=636&amp;h=437" />
+</figure>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">newton-figure</span></code></p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Newton also  formulated the Laws of Motion in his book, Mathematical Principles of Natural Philosophy</p>
+</aside>
+</section>
+</section>
+<section id="height-400px-name-newton-figure">
+<span id="content-references-sd"></span><h2>height:400px
+name:newton-figure<a class="headerlink" href="#height-400px-name-newton-figure" title="Permalink to this headline">#</a></h2>
+<p>Sir Isaac Newton surrounded by symbols of some of his greatest findings</p>
+<section id="simple-definition">
+<h3>Simple Definition<a class="headerlink" href="#simple-definition" title="Permalink to this headline">#</a></h3>
+<p>Newton’s Law of Gravitation states that any particle of matter in the universe attracts any other with a force varying directly as the product of the masses and inversely as the square of the distance between them.</p>
+</section>
+<section id="equation">
+<span id="content-references-eq"></span><h3>Equation<a class="headerlink" href="#equation" title="Permalink to this headline">#</a></h3>
+<p>The equation for universal gravition is written as:<br><br>
+$<span class="math notranslate nohighlight">\( F=G\frac{{m_1}{m_2}}{{r^2}} \)</span>$ (universal_grav)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(F\)</span> is the gravitational force acting between two objects</p></li>
+<li><p><span class="math notranslate nohighlight">\(G\)</span> is the gravitational constant</p></li>
+<li><p><span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span> are the masses of the objects</p></li>
+<li><p><span class="math notranslate nohighlight">\(r\)</span> is the distance between the centers of their masses</p></li>
+</ul>
+<p>A link to the universal gravition block: <code class="xref eq docutils literal notranslate"><span class="pre">universal_grav</span></code></p>
+</section>
+<section id="datasets">
+<span id="content-references-ds"></span><h3>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">#</a></h3>
+<p>If we wanted to look at more astronomy data, we could download a dataset from <a class="reference external" href="https://data.world/markmarkoh/future-asteroids">data.world</a> and load it like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">asteroids_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/raw/future.csv)</span>
+<span class="n">asteroids_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="n">asteroids_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/raw/future.csv)</span>
+                                                      <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+</section>
+</section>
+<section id="telescopic-observation-of-mars">
+<span id="content-references-to"></span><h2>Telescopic Observation of Mars<a class="headerlink" href="#telescopic-observation-of-mars" title="Permalink to this headline">#</a></h2>
+<p>Galileo Galilei was the first person to observe Mars with a primitive telescope in 1610. However, Mars has been documented for at least 4000 years so it is impossible to credit a specific person with it’s discovery.</p>
+<div class="tip admonition">
+<p class="admonition-title">Do you want to see an impressive telescope?</p>
+<p>Visit the The Dominion Astrophysical Observatory in Victoria!</p>
+</div>
+<section id="content-references-his">
+<span id="id1"></span><h3>History<a class="headerlink" href="#content-references-his" title="Permalink to this headline">#</a></h3>
+<p>Galileo was an Italian astronomer, physicist and engineer, sometimes described as a polymath. His contributions to observational astronomy include telescopic confirmation of the phases of Venus, observation of the four largest satellites of Jupiter, observation of Saturn’s rings, and analysis of lunar craters and sunspots.
+<br><br></p>
+<figure class="align-default">
+<img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/330px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg/330px-Justus_Sustermans_-_Portrait_of_Galileo_Galilei%2C_1636.jpg" />
+</figure>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">galileo-figure</span></code></p>
+<div class="note admonition">
+<p class="admonition-title">Did you know?</p>
+<p>Galileo has been called the father of observational astronomy, modern physics, the scientific method, and modern science.</p>
+</div>
+</section>
+</section>
+<section id="height-400px-name-galileo-figure">
+<span id="content-references-ms"></span><h2>height:400px
+name:galileo-figure<a class="headerlink" href="#height-400px-name-galileo-figure" title="Permalink to this headline">#</a></h2>
+<p>Galileo Galilei in a 1636 portrait by Justus Sustermans</p>
+<section id="mars-stats">
+<h3>Mars Stats<a class="headerlink" href="#mars-stats" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Mars has a mass of <span class="math notranslate nohighlight">\(m_{j} \approx 6.42 \times 10^{23} \: \text {kg}\)</span>, about 10 times less than Earth</p></li>
+<li><p>Mars has a volume of  <span class="math notranslate nohighlight">\(1.6318 \times 10^{11} \: \text {kg}^{3}\)</span>, which is the equivalent of 0.151 Earths</p></li>
+<li><p>Mars has a density of <span class="math notranslate nohighlight">\(3.93 \: \text {g}/{cm}^3\)</span>, lower than the Earth’s density</p></li>
+</ul>
+</section>
+<section id="calculations">
+<span id="content-references-calc"></span><h3>Calculations<a class="headerlink" href="#calculations" title="Permalink to this headline">#</a></h3>
+<p>Here is how we could create a dictionary to store the ratio between gravity on another planet and Earth, so in future we could calculate what objects would weigh there.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">gravity_ratio_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Mercury&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
+    <span class="s2">&quot;Venus&quot;</span><span class="p">:</span> <span class="mi">91</span><span class="p">,</span>
+    <span class="s2">&quot;Earth&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="s2">&quot;Mars&quot;</span><span class="p">:</span> <span class="mi">38</span><span class="p">,</span>
+    <span class="s2">&quot;Jupiter&quot;</span><span class="p">:</span> <span class="mi">234</span><span class="p">,</span>
+    <span class="s2">&quot;Saturn&quot;</span><span class="p">:</span> <span class="mi">106</span><span class="p">,</span>
+    <span class="s2">&quot;Uranus&quot;</span><span class="p">:</span> <span class="mi">92</span><span class="p">,</span>
+    <span class="s2">&quot;Neptune&quot;</span><span class="p">:</span> <span class="mi">119</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Here is my citation for calculating weight on other planets <span id="id2">[<a class="reference internal" href="markdown.html#id8">Hel20</a>]</span>.</p>
+<blockquote>
+<div><p><strong>Here are some cross-references to the sections:</strong><br>
+<a class="reference internal" href="#content-references-cs"><span class="std std-ref">Contributions to Science</span></a><br>
+<a class="reference internal" href="#content-references-ug"><span class="std std-ref">Newton’s Law</span></a><br>
+<a class="reference internal" href="#content-references-sd"><span class="std std-ref">Simple Definition</span></a><br>
+<a class="reference internal" href="#content-references-eq"><span class="std std-ref">Equation</span></a><br>
+<a class="reference internal" href="#content-references-ds"><span class="std std-ref">Datasets</span></a><br>
+<a class="reference internal" href="#content-references-to"><span class="std std-ref">Telescopic Observation of Mars</span></a><br>
+<a class="reference internal" href="#content-references-his"><span class="std std-ref">History</span></a><br>
+<a class="reference internal" href="#content-references-ms"><span class="std std-ref">Mars Stats</span></a><br>
+<a class="reference internal" href="#content-references-calc"><span class="std std-ref">Calculations</span></a><br></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Here are some references to the figures:</strong><br>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">newton-figure</span></code><br>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">galileo-figure</span></code><br></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="libraries.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">An Ode to Libraries</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="grizzlies.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Grizzly Bear Conservation in BC</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Heather Hay<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

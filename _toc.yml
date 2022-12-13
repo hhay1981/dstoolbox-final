@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Library Notebook
+    chapters:
+    - file: libraries
+  - caption: Science Markdown
+    chapters:
+    - file: science
+  - caption: Grizzly Bears Notebook
+    chapters:
+    - file: grizzlies
+  - caption: Freshwater Aquariums Markdown
+    chapters:
+    - file: aquariums

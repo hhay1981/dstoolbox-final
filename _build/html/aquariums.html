@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Freshwater Aquariums &#8212; Data Science Toolbox Final Assignment</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Grizzly Bear Conservation in BC" href="grizzlies.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/puzzle-img.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Data Science Toolbox Final Assignment</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Library Notebook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="libraries.html">
+   An Ode to Libraries
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Science Markdown
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="science.html">
+   Contributions to Science
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Grizzly Bears Notebook
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="grizzlies.html">
+   Grizzly Bear Conservation in BC
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Freshwater Aquariums Markdown
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Freshwater Aquariums
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/aquariums.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Faquariums.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/aquariums.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="_sources/aquariums.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-tank-figure">
+   height:400px
+name:tank-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-requirements">
+     Basic Requirements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#water-conditioning">
+     Water Conditioning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aquarium-volume">
+     Aquarium Volume
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-betta-figure">
+   height:400px
+name:betta-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aquarium-datasets">
+     Aquarium Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Freshwater Aquariums</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-tank-figure">
+   height:400px
+name:tank-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-requirements">
+     Basic Requirements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#water-conditioning">
+     Water Conditioning
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aquarium-volume">
+     Aquarium Volume
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-400px-name-betta-figure">
+   height:400px
+name:betta-figure
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aquarium-datasets">
+     Aquarium Datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="freshwater-aquariums">
+<span id="content-references-fwa"></span><h1>Freshwater Aquariums<a class="headerlink" href="#freshwater-aquariums" title="Permalink to this headline">#</a></h1>
+<section id="height-400px-name-tank-figure">
+<h2>height:400px
+name:tank-figure<a class="headerlink" href="#height-400px-name-tank-figure" title="Permalink to this headline">#</a></h2>
+<p>Well maintained aquariums can be a wonderful hobby for anyone!</p>
+<section id="basic-requirements">
+<h3>Basic Requirements<a class="headerlink" href="#basic-requirements" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Water conditioner</p></li>
+<li><p>Water filter</p></li>
+<li><p>Aquarium heater</p></li>
+<li><p>Air pump</p></li>
+<li><p>Substrate</p></li>
+<li><p>Lighting</p></li>
+<li><p>Aquarium water test strips</p></li>
+</ul>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Some fish do better without an air pump, like bettas.</p>
+</aside>
+</section>
+<section id="water-conditioning">
+<span id="content-references-wc"></span><h3>Water Conditioning<a class="headerlink" href="#water-conditioning" title="Permalink to this headline">#</a></h3>
+<p>It is recommended to only use water conditioners that say “Sodium Thiosulfate” on the Bottle in the Ingredients List as they are very safe to use with fish. The reaction of chlorine (“chlorine” is typically added to water as sodium hypochlorite) with sodium thiosulfate is:<br><br></p>
+<div class="math notranslate nohighlight">
+\[ Na_2S_2O_3 + 4NaClO + H_2O = H_2SO_4 + Na2SO4 + 4NaCl \]</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can buy water conditioner for your aquarium at your local PetSmart store</p>
+</div>
+<p>Here is my citation for the aquarium water chemistry equation <span id="id1">[<a class="reference internal" href="markdown.html#id7">Bog</a>]</span>.</p>
+</section>
+<section id="aquarium-volume">
+<span id="content-references-av"></span><h3>Aquarium Volume<a class="headerlink" href="#aquarium-volume" title="Permalink to this headline">#</a></h3>
+<p>The common rule for keeping fish is 1 gallon of water per inch of grown fish.
+<br><br>
+Let’s say you have one betta fish at 3 inches and 6 black neon tetras at 1.5 inches, like I do. This is the calculation you’d do to find the minimum volume of water your aquarium needs to hold: <br>
+$<span class="math notranslate nohighlight">\((6 \times 1.5) + 3 = 12 \)</span>$ <br>
+Phew! I have a 15-gallon tank for them, so my fish can all safely co-exist there.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Overcrowding your tank can lead to some fish becoming overly territorial and agressive toward your other fish.</p>
+</div>
+<figure class="align-default">
+<img alt="https://www.fishkeepingworld.com/wp-content/uploads/2017/11/Crowntail-Betta-Care-Guide-Lifespan-Facts-and-Compatibility-Banner-1.jpg" src="https://www.fishkeepingworld.com/wp-content/uploads/2017/11/Crowntail-Betta-Care-Guide-Lifespan-Facts-and-Compatibility-Banner-1.jpg" />
+</figure>
+</section>
+</section>
+<figure class="align-default" id="content-references-ad">
+<img alt="_images/aquarium-img.jpg" src="_images/aquarium-img.jpg" />
+</figure>
+<section id="height-400px-name-betta-figure">
+<span id="content-references-br"></span><h2>height:400px
+name:betta-figure<a class="headerlink" href="#height-400px-name-betta-figure" title="Permalink to this headline">#</a></h2>
+<p>Blue and red Crowntail Betta, similar to the lovely fellow in my tank</p>
+<section id="aquarium-datasets">
+<h3>Aquarium Datasets<a class="headerlink" href="#aquarium-datasets" title="Permalink to this headline">#</a></h3>
+<p>Let’s say you wanted to see aquarium data from <a class="reference external" href="https://data.world/city-of-ny/gzk5-mux8">data.world</a> which happens to be in <em>json</em> format. Here’s how you would load it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">aq_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;./data/raw/directory-of-zoos-and-aquariums-1.json&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">aq_df</span><span class="o">.</span><span class="n">to_string</span><span class="p">())</span> 
+</pre></div>
+</div>
+<p>You could also create variables of your fish measurements and compare against your aquarium size to figure out if you need to “level up”!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">betta</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">neon_tetra</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">rosy_barb</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">blue_dwarf_gourami</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">aquarium_gal</span> <span class="o">=</span> <span class="mi">15</span>
+
+<span class="n">aquarium_vol</span> <span class="o">=</span> <span class="p">(</span><span class="n">neon_tetra</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">betta</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;your aquarium must hold at least &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">aquarium_vol</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; gallons of water to have this many fish!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Here are some cross-references to the sections:</strong><br>
+<a class="reference internal" href="#content-references-fwa"><span class="std std-ref">Fresh Water Aquariums</span></a><br>
+<a class="reference internal" href="#content-references-br"><span class="std std-ref">Basic Requirements</span></a><br>
+<a class="reference internal" href="#content-references-wc"><span class="std std-ref">Water Conditioning</span></a><br>
+<a class="reference internal" href="#content-references-av"><span class="std std-ref">Aquarium Volume</span></a><br>
+<a class="reference internal" href="#content-references-ad"><span class="std std-ref">Aquarium Datasets</span></a><br></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Here are some references to the figures:</strong><br>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">betta-figure</span></code><br>
+<code class="xref std std-numref docutils literal notranslate"><span class="pre">tank-figure</span></code><br></p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="grizzlies.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Grizzly Bear Conservation in BC</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Heather Hay<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
