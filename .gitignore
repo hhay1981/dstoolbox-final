@@ -1,0 +1,18 @@
+# Debug logs (npm, yarn)
+*.log
+
+# Editor artifacts
+.*.sw[a-z]
+*~
+.#*
+.vscode
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# .ipynb Checkpoints
+.ipynb_checkpoints
+
+# Jupyter Book artifacts
+_build/
